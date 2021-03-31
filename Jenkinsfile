@@ -254,31 +254,3 @@ def mapToList(depmap) {
   }
   dlist
 }
-
-// def sendErrorMessageToHipchat(errorMessage) {
-//   def projectName = '$PROJECT_NAME'
-//   def buildUrl = '$BUILD_URL'
-//   def buildNumber = '$BUILD_NUMBER'
-//   def buildChanges = '$HIPCHAT_CHANGES_OR_CAUSE'
-//   def buildDuration = '$BUILD_DURATION'
-
-//   hipchatSend(
-//     message: """
-//       <strong>Build FAILURE</strong><img src="https://dujrsrsgsd3nh.cloudfront.net/img/emoticons/paddlin-1417756794@2x.png" alt="Thats a paddlin" height="40" width="40"><small>That's a paddlin'</small>
-//       <br>
-//       Camunda Process Project Deployment ( ${env.CAMUNDA_URL} ):
-//       <br>
-//       Job Name: <strong>${projectName}</strong>
-//       <br>
-//       <a href=\"${buildUrl}\">Build ${buildNumber}</a> was ${buildChanges}
-//       <br>
-//       Build Duration: ${buildDuration}
-//       <br>
-//       <strong>Error Message:</strong> ${errorMessage}
-//       """,
-//     color: "RED",
-//     failOnError: true,
-//     notify: true,
-//     room: "MY-HIPCHAT-ROOM-GOES-HERE"
-//   )
-}
