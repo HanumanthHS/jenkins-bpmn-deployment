@@ -77,14 +77,7 @@ pipeline {
           echo "-------------------------------------------------------"
           echo "Looking if each file listed in deploy_${params['CAMUNDA_ENV']}.json exists:"
 
-          for (def e in mapToList(files)) {
-            if (fileExists("${e.value}")) {
-              echo "${e.key}:${e.value} FOUND"
-            } else {
-              // sendErrorMessageToHipchat("deploy_${params['CAMUNDA_ENV']}.json deployment.files: ${e.key}:${e.value} CANNOT BE FOUND")
-              error("${e.key}:${e.value} CANNOT BE FOUND")
-            }
-          }
+
         }
       }
     }
